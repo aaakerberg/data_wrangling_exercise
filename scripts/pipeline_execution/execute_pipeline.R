@@ -48,9 +48,9 @@ message("Data wrangling pipeline successfully completed, starting analysis...")
 # 4. Execute data analysis --------------------------------------------------
 
 id_highest_percentage <- highest_percentage(df, ID_COL, PERCENTAGE_COL)
-cat("Identifier of the entry with highest percentage of positive tests is", id_highest_percentage)
+cat("Identifier of the entry with highest percentage of positive tests is", id_highest_percentage, "\n")
 
 total_sum_numbers_tested <- sum_numbers_tested(df, NUMBER_TESTED_COL)
-cat("The total sum of all the animals tested is", total_sum_numbers_tested)
+cat("The total sum of all the animals tested is", total_sum_numbers_tested, "\n")
 
 message("Data wrangling pipeline and analysis completed!")
