@@ -40,16 +40,18 @@ df <- extract_data(INPUT_FILE_PATH, COL_TYPES) %>%
       reorder_columns(REORDER_COLS) %>%
       extract_author(ID_COL, AUTHOR_COL)
       
-generate_output(df, OUTPUT_FILE_PATH)
+generate_output(df, OUTPUT_FILE_PATH, OUTPUT_SHEET_NAME)
 
 message("Data wrangling pipeline successfully completed, starting analysis...")
 
 
 # 4. Execute data analysis --------------------------------------------------
 
+# analysis to find ID value of data entry with highest percentage of animals tested.
 id_highest_percentage <- highest_percentage(df, ID_COL, PERCENTAGE_COL)
 cat("Identifier of the entry with highest percentage of positive tests is", id_highest_percentage, "\n")
 
+# analysis to find total sum of all animals tested.
 total_sum_numbers_tested <- sum_numbers_tested(df, NUMBER_TESTED_COL)
 cat("The total sum of all the animals tested is", total_sum_numbers_tested, "\n")
 

@@ -17,13 +17,13 @@
 #   df: data frame to be written as Excel file.
 #   output_file_path: file path where output file will be written to.
 
-generate_output <- function(df, output_file_path){
+generate_output <- function(df, output_file_path, output_sheet_name){
   # Checks that df input is a data frame.
   if (!is.data.frame(df)) abort("df is not a data frame.")
   
   # Checks that df contains data.
   if(nrow(df) == 0) abort("Error: df is empty.")
   
-  # Writes data frame to excel file at specified file path.
-  write_xlsx(df, path = output_file_path)
+  # Writes data frame to excel file at specified file path with sheet name.
+  write_xlsx(x = setNames(list(df), output_sheet_name), path = output_file_path)
 }

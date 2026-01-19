@@ -16,7 +16,9 @@ The cloned repository should now be located in the directory you cloned the repo
 
 #### 1. Load the required packages using 'renv'.
 
-After cloning the repository, run the following commands in the R console:
+After cloning the repository, navigate to the project directory and open the project file **data_wrangling_exercise.Rproj**.
+
+Once the project is opened in RStudio, run the following commands in the R console:
 
 ``` r
 install.packages("renv")
@@ -27,7 +29,7 @@ This automatically installs all the packages (and their correct versions) needed
 
 #### 2. Navigate to the project root directory.
 
-Check if you are in the project root directory by running this command in the terminal:
+In RStudio, check if you are in the project root directory by running this command in the terminal window:
 
 ``` bash
 pwd
@@ -37,7 +39,7 @@ The file path should end with '/data_wrangling_exercise'. If you are not in this
 
 #### 3. Execute pipeline R script.
 
-Run the following command in the terminal:
+Run the following command in the RStudio terminal window:
 
 ``` r
 Rscript scripts/pipeline_execution/execute_pipeline.R 

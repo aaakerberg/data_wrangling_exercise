@@ -13,10 +13,12 @@ library(dplyr)
 library(rlang)
 library(here)
 
+
+# Source all function and config scripts
 source(here("scripts", "tests", "test_mock_data", "test_mock_data.R"))
 source(here("scripts", "functions", "data_validation.R"))
 
-
+# create tests for validation rules.
 test_that("validate_data returns data when all rules are met", {
   expect_equal(validate_data(valid_df), valid_df)
 })

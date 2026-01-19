@@ -12,6 +12,7 @@
 
 INPUT_FILE_PATH <- "data/input_data/Data_Scientist_Exercise_File.xlsx"
 OUTPUT_FILE_PATH <- "data/output_data/Data_Scientist_Exercise_File.xlsx"
+OUTPUT_SHEET_NAME <- "EXERCISE_OUTPUT_FILE"
 
 # 2. Column types -------------------------------------------------------------
 
